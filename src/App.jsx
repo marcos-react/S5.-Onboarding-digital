@@ -29,9 +29,19 @@ const App = () => {
   // Get the currentCardData
   const currentCardData = tutorialData[step];
 
+  // Arrow function nextStep()
+  const nextStep = () => {
+    if(step < tutorialData.length -1){
+      setStep(step+1);
+      //console.log(step);
+    }
+  }
+
   return (
     <>
-      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} />
+      
+      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} />
+      
     </>
   );
 }
