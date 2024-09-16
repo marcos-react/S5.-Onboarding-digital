@@ -42,10 +42,18 @@ const App = () => {
     }
   }
 
+  const prevStep = () => step > 0 && setStep(step-1);
+  
+  const isFirstStep = () => step === 0;
+
+  const isFinalStep = () => step === tutorialData.length -1;
+
+
+
   return (
     <>
       
-      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} />
+      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} prevStep={prevStep} step={step} isFirstStep={isFirstStep} isFinalStep={isFinalStep}/>
       
     </>
   );

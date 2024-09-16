@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css'
 
-const Card = ({ title, description, bgcolor, image, nextStep}) => {
+const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, isFirstStep,isFinalStep}) => {
   return (
     <>
       <div className='card mx-auto'>
@@ -26,10 +26,17 @@ const Card = ({ title, description, bgcolor, image, nextStep}) => {
                 {/* circle icon 2 */}
                     <div className="circle"></div>
                 </div>
-                    {/* Button arrow */}
-                    <button onClick={nextStep} className='btn btn-dark btn-circle rounded-circle d-flex justify-content-center align-items-center'>
+
+                <div className="d-flex justify-content-end">
+                    {/* Button arrow left */}
+                    {!isFirstStep() && <button onClick={prevStep} className='btn btn-circle rounded-circle d-flex justify-content-center align-items-center'>
+                        <i className='bi bi-arrow-left'></i>
+                    </button>}
+                    {/* Button arrow right */}
+                    {!isFinalStep() && <button onClick={nextStep} className='btn btn-dark btn-circle rounded-circle d-flex justify-content-center align-items-center'>
                         <i className='bi bi-arrow-right'></i>
-                    </button>
+                    </button>}
+                </div>
             </div>
         </div>
        </div>
