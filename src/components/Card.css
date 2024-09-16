@@ -1,0 +1,36 @@
+body {
+    background-color: #ebebeb;
+}
+
+
+.card {
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+ 
+  .card .image img {
+    display: block;
+    width: 100%;
+  }
+  
+    
+  .indicators .line {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-right: 5px;
+  }
+  
+  
+  .indicators .circle {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  
