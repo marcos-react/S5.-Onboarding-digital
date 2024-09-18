@@ -1,7 +1,13 @@
 import React from 'react';
-import './Card.css'
+import './Card.css';
+import Indicator from './Indicator/Indicator.jsx';
 
-const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, isFirstStep,isFinalStep}) => {
+
+
+const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, isFirstStep,isFinalStep,totalStep}) => {
+
+    console.log("totalStep in Card:", totalStep);
+    
   return (
     <>
       <div className='card mx-auto'>
@@ -17,14 +23,7 @@ const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, is
 
             {/* Indicators */}
                 <div className="indicators d-flex align-items-center">
-                {/* Short line */}
-                    <div className="line"></div>
-
-                {/* circle icon 1*/}
-                    <div className="circle"></div>
-
-                {/* circle icon 2 */}
-                    <div className="circle"></div>
+                    <Indicator totalStep={totalStep} step={step}></Indicator>
                 </div>
 
                 <div className="d-flex justify-content-end">

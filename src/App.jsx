@@ -47,13 +47,14 @@ const App = () => {
   const isFirstStep = () => step === 0;
 
   const isFinalStep = () => step === tutorialData.length -1;
-
+  
+  //console.log("tutorialData.length:", tutorialData.length);
 
 
   return (
     <>
       
-      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} prevStep={prevStep} step={step} isFirstStep={isFirstStep} isFinalStep={isFinalStep}/>
+      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} prevStep={prevStep} step={step} isFirstStep={isFirstStep} isFinalStep={isFinalStep} totalStep ={tutorialData.length}/>
       
     </>
   );
