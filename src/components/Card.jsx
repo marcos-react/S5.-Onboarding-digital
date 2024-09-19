@@ -4,10 +4,10 @@ import Indicator from './Indicator/Indicator.jsx';
 
 
 
-const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, isFirstStep,isFinalStep,totalStep}) => {
+const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, isFirstStep,isFinalStep,totalStep,goToPhrase}) => {
 
-    console.log("totalStep in Card:", totalStep);
-    
+  //  console.log("totalStep in Card:", totalStep);
+
   return (
     <>
       <div className='card mx-auto'>
@@ -23,7 +23,7 @@ const Card = ({ title, description, bgcolor, image, nextStep, prevStep, step, is
 
             {/* Indicators */}
                 <div className="indicators d-flex align-items-center">
-                    <Indicator totalStep={totalStep} step={step}></Indicator>
+                    <Indicator totalStep={totalStep} step={step} goToPhrase={goToPhrase}></Indicator>
                 </div>
 
                 <div className="d-flex justify-content-end">

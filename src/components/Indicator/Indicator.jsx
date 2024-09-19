@@ -13,7 +13,7 @@ export const StyledLink = styled.div`
 `
 
 
-const Indicator = ({ totalStep, step }) => {
+const Indicator = ({ totalStep, step, goToPhrase }) => {
   //  console.log("totalStep:", totalStep, "step:", step); // Check values
     
     const indicators = [...Array(totalStep).keys()]; // create an array with totalStep
@@ -21,7 +21,7 @@ const Indicator = ({ totalStep, step }) => {
     return (
       <div className='indicators'>
         {indicators.map((index) => (
-          <StyledLink key={index} isActive={index === step}></StyledLink> //iterate each index with StyleLink if index and step same then isActive true
+          <StyledLink key={index} isActive={index === step} onClick={() => goToPhrase(index)}></StyledLink> //iterate each index with StyleLink if index and step same then isActive true and if you click on then show the text.
         ))}
       </div>
     );

@@ -50,11 +50,10 @@ const App = () => {
   
   //console.log("tutorialData.length:", tutorialData.length);
 
-
   return (
     <>
       
-      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} prevStep={prevStep} step={step} isFirstStep={isFirstStep} isFinalStep={isFinalStep} totalStep ={tutorialData.length}/>
+      <Card title={currentCardData.title} description={currentCardData.description} bgcolor={currentCardData.bgcolor} image={currentCardData.image} nextStep={nextStep} prevStep={prevStep} step={step} isFirstStep={isFirstStep} isFinalStep={isFinalStep} totalStep ={tutorialData.length} goToPhrase={(step) => setStep(step)}/>
       
     </>
   );
